@@ -40,6 +40,15 @@ nav {
     width: 85px;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.page {
+    animation: fadeIn 1s ease-out;
+}
+
 .page ul {
     display: flex;
     list-style: none;
@@ -56,7 +65,8 @@ nav {
     
 }
 
-.page nav a:hover{
+.page nav a:hover, .conteudo2 a:hover, .conteudo3 a:hover, .membercard a:hover {
+    color: #134e7e;
     text-decoration: underline;
 }
 
@@ -266,8 +276,10 @@ section p {
 
 }
 
-button:hover {
-    background: #802f23;
+button:hover, .membercard button:hover {
+    background-color: #802f23;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .select {
@@ -337,8 +349,10 @@ button:hover {
 }
 
 .card:hover {
-    background-color: #232532;
-    transform: translateY(-7px);
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-out;
 }
 
 .conteudo2 {
@@ -524,9 +538,11 @@ button:hover {
     background-color: #134e7e;
 }
 
+input, textarea {
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-
-
-
-
-
+input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(230, 83, 60, 0.5);
+    border: 1px solid #E6533C;
+}
