@@ -276,10 +276,29 @@ section p {
 
 }
 
+/* Estilo básico para botões de ação */
+button, .membercard button {
+    color: #FFFFFF;
+    background-color: #E6533C;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para adicionar interatividade */
 button:hover, .membercard button:hover {
-    background-color: #802f23;
-    transform: scale(1.05);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #CC3A2B;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#member{
+    height: 68px;
 }
 
 .select {
@@ -353,6 +372,11 @@ button:hover, .membercard button:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transform: translateY(-5px);
     transition: all 0.3s ease-out;
+}
+
+.imgconteudo2 {
+    width: 560px;
+    height: 510px;
 }
 
 .conteudo2 {
@@ -449,6 +473,7 @@ button:hover, .membercard button:hover {
 
 .membercard {
     display: flex;
+    justify-content: center;
 }
 
 .membertext {
